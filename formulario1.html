@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario1.css" />
+    <title>Formulario 01</title>
+</head>
+<body>
+
+    <div>
+        <h1 id="titulo"><strong>Complete suas Informações</strong></h1>
+        <br>
+    </div>
+     
+<form action="Processa_forma.php" method="Post">
+
+    <fieldset class="grupo">
+        <div class="campo">
+            <legend><strong>Dados Gerais</strong></legend>
+
+            <label for="nome">Nome</label>
+            <input type="text" minlength="3" id="nome" name="nome" riquered /><br/>
+        
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="text" id="data_nascimento" name="data_nascimento" placeholder="11/11/11" /><br/>
+
+            <label for="cpf">CPF</label>
+            <input type="text" maxlength="11" minlength="11" id="cpf" name="cpf" placeholder="111.111.111-11" required /><br/>
+
+            <label for="tel">Celular</label>
+            <input type="tel" maxlength="13" id="tel" name="tel" placeholder="11-11111-1111" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required/><br/>
+        </div>
+    </fieldset>
+    
+
+    <fieldset class="grupo">
+        <div class="campo">
+            <legend><strong>Endereço</strong></legend>
+
+            <label for="tipo_endereço">Tipo</label>
+
+            <select id="tipo_endereço" name="tipo_endereço">
+                <option value="">Selecione</option>
+                <option value="rua">Rua</option>
+                <option value="estrada">Estrada</option>
+                <option value="rodovia">Rodovia</option>
+                <option value="outro">Outro</option>
+
+            </select><br/>
+
+            <label for="logradouro_endereco">Logradouro</label>
+            <input type="text" id="logradouro_endereco" name="logradouro_endereco" /><br/>
+
+            <label for="numero_endereco">Nº</label>
+            <input type="text" id="numero_indereco" name="numero_endereco" /><br/>
+
+            <label for="complemento_endereco">Complemento</label>
+            <input type="complemento_endereco" id="complemento_endereco" name="complemento_endereco" /><br/>
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+        <legend><strong>Fale Conosco</strong></legend>
+        
+        <div class="check">
+            <input type="radio" name="tipo_msg" value="Sugestão" />
+            <label for="tipo_msg">Sugestão</label>
+            <input type="radio" name="tipo_msg" value="Crítica" />
+            <label for="tipo_msg">Crítica</label>
+            <input type="radio" name="tipo_msg" value="Elogio" />
+            <label for="tipo_msg">Elogio</label><br/><br/>
+            <label for="msg">Mensagem</label><br/>
+            <textarea name="msg" id="msg" cols="25" rows="7"></textarea><br/>
+        </div>
+    </fieldset>
+        <!--Botão da caixa de mensagem-->
+    <fieldset class="grupo">
+        <div class="botao">
+            <button type="submit">Enviar Mensagem</button>
+            <button type="reset">Limpar Formulario</button>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
